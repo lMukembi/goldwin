@@ -3,7 +3,7 @@ import "../styles/notifications.css";
 import axios from "axios";
 import { TransferCard } from "./transferCard";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const TransferNotifications = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

@@ -10,7 +10,7 @@ import { AdminWithdrawCard } from "./adminWithdrawCard";
 import { AdminMenu } from "./adminMenu";
 import { AdminHeader } from "./adminHeader";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const AdminDashboard = () => {
   const adminData = JSON.parse(localStorage.getItem("JSUD"));

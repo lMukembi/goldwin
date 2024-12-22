@@ -4,7 +4,7 @@ import { Login } from "./login";
 import { redirect } from "react-router-dom";
 import { BsPersonCheck } from "react-icons/bs";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Welcome = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

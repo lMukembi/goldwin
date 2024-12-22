@@ -5,7 +5,7 @@ import {
   WITHDRAW_SUCCESS,
 } from "../constants/mpesa";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const upgrade = (packageData) => async (dispatch) => {
   const data = localStorage.getItem("newUser");
@@ -14,7 +14,6 @@ export const upgrade = (packageData) => async (dispatch) => {
   const headers = {
     "Content-Type": "application/json",
     Authorization: `Bearer ${token.data}`,
-    //   "Access-Control-Allow-Origin": "https://www.jorjer.com",
   };
   const config = {
     headers: headers,

@@ -7,7 +7,7 @@ import { redirect, useNavigate } from "react-router-dom";
 import { AdminHeader } from "./adminHeader";
 import { AdminMenu } from "./adminMenu";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Members = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

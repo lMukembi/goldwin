@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { AdminHeader } from "./adminHeader";
 import { AdminMenu } from "./adminMenu";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Marketers = () => {
   const adminData = JSON.parse(localStorage.getItem("JSUD"));

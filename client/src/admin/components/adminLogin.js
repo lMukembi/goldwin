@@ -6,7 +6,7 @@ import { Home } from "../../components/home";
 import "../../styles/login.css";
 import axios from "axios";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const AdminLogin = () => {
   const [email, setEmail] = useState("");

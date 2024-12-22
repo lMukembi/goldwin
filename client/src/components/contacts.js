@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Menu } from "./menu";
 import { Login } from "./login";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Contact = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

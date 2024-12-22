@@ -10,7 +10,7 @@ import { Login } from "./login";
 import axios from "axios";
 import { Menu } from "./menu";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Transfer = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

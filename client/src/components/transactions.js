@@ -5,7 +5,7 @@ import axios from "axios";
 import { TransactionCard } from "./transactionCard";
 import { redirect } from "react-router-dom";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Transactions = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

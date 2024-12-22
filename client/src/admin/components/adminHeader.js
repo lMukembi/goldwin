@@ -9,7 +9,7 @@ import { Link, redirect } from "react-router-dom";
 import axios from "axios";
 import { AdminMobileMenu } from "./adminMobileMenu";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const AdminHeader = () => {
   const [menu, setMenu] = useState(false);

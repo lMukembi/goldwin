@@ -23,7 +23,7 @@ import { Login } from "./login";
 import { PiCertificateLight } from "react-icons/pi";
 import { IoBagHandleOutline } from "react-icons/io5";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Package = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

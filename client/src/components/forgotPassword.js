@@ -6,7 +6,7 @@ import Logo from "../assets/images/Logo.png";
 import "../styles/forgotPassword.css";
 import axios from "axios";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const ForgotPassword = () => {
   const [email, setEmail] = useState("");

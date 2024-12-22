@@ -4,7 +4,7 @@ import { Header } from "./header";
 import { Link, redirect } from "react-router-dom";
 import axios from "axios";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const NotFound = () => {
   const [userInfo, setUserInfo] = useState({});

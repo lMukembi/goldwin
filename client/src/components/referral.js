@@ -6,7 +6,7 @@ import { GrLink } from "react-icons/gr";
 import axios from "axios";
 import { redirect } from "react-router-dom";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Referal = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

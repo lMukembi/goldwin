@@ -5,7 +5,7 @@ import { toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const AdminWithdrawCard = ({ withdrawalMessage }) => {
   const [value, setValue] = useState("");

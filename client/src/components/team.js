@@ -9,7 +9,7 @@ import axios from "axios";
 import { Home } from "./home";
 import { Menu } from "./menu";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const Team = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

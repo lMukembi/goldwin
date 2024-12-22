@@ -10,7 +10,7 @@ import Coming from "../../assets/images/Coming.png";
 import { toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const goldwinAPI = "http://localhost:8000";
+const goldwinAPI = process.env.SERVER_URL;
 
 export const AddProduct = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));
