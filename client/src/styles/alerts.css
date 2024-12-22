@@ -1,0 +1,30 @@
+.login_alert,
+.logout_alert {
+  width: 80%;
+  height: 280px;
+  border-radius: 10px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: #d9e7e2;
+  position: fixed;
+  top: 10%;
+  z-index: 10;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.login_alert .closealert,
+.logout_alert .closealert {
+  background-color: #d9e7e2;
+  padding: 10px;
+  width: 20%;
+  margin: 10px auto;
+  border: none;
+  border-radius: 5px;
+  color: green;
+  cursor: pointer;
+}

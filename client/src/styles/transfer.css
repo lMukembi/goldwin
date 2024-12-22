@@ -1,0 +1,97 @@
+.transfer_wrapper {
+  background-color: white;
+  height: 100vh;
+  padding: 5px 0px;
+}
+
+.transfer {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.transfer input {
+  padding: 15px 10px;
+  border-radius: 10px;
+  border: 1px solid #d9e7e2;
+  outline: none;
+  color: black;
+  font-family: system-ui, Segoe UI, sans-serif, color-emoji;
+  font-style: normal;
+}
+
+.transfer input:nth-of-type(2) {
+  margin-top: 2rem;
+}
+
+.transfer .checkstatus i {
+  align-items: center;
+  flex-direction: row;
+  font-size: 12px;
+  display: flex;
+  margin-left: 5px;
+}
+
+.transfer .checkstatus i .icon {
+  font-size: 15px;
+}
+
+.transfer .checkstatus .taken {
+  color: #dd2334;
+}
+
+.transfer .checkstatus .available {
+  color: green;
+}
+
+.transfer small {
+  margin: 5px 0px;
+  color: #d9e7e2;
+}
+
+.transfer small:nth-of-type(1) {
+  margin: 5px 10px 0px 0px;
+}
+
+.transfer small:nth-of-type(2) {
+  color: #d9e7e2;
+}
+
+.transfer .nobalance {
+  color: #dd2334;
+}
+
+.transfer button:enabled {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #dd2334;
+  margin-top: 25px;
+  font-weight: bold;
+  padding: 15px 10px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.transfer button:disabled {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  background-color: #d9e7e2;
+  font-weight: bold;
+  color: white;
+  border: none;
+  margin-top: 25px;
+  padding: 15px 10px;
+  border-radius: 10px;
+  cursor: not-allowed;
+  font-size: 15px;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .transfer_wrapper {
+    margin: 5px 20% 5px auto;
+    width: 40%;
+  }
+}

@@ -1,0 +1,47 @@
+.not_found_wrapper {
+  margin: auto;
+  background-color: white;
+}
+
+.not_found {
+  text-align: center;
+  align-items: center;
+}
+
+.not_found .not_found_btn {
+  display: flex;
+  justify-content: center;
+}
+
+.not_found .not_found_btn :any-link {
+  margin: 5px;
+  text-decoration: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  background-color: #dd2334;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.not_found .not_found_btn :any-link:nth-child(2) {
+  background-color: transparent !important;
+  border: 1px solid #d9e7e2;
+  color: green;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .not_found_wrapper {
+    border-radius: 10px;
+    margin: 8% auto;
+    width: 35%;
+    height: 70vh;
+  }
+
+  .not_found {
+    margin: 20% auto;
+  }
+}

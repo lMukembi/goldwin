@@ -1,0 +1,86 @@
+.headwrapper {
+  padding: 5px;
+  background-color: rgb(34, 197, 94, 1);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 9%;
+  z-index: 10;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.head .icon {
+  font-size: 21px;
+  color: white;
+  cursor: pointer;
+}
+
+.head sup {
+  position: absolute;
+  background-color: #dd2334;
+  padding: 5px;
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: white;
+}
+
+.head .notsup {
+  top: 15%;
+  right: 44%;
+}
+
+.headhr {
+  border-top: 1px;
+  margin: 4.5rem auto 5px auto;
+  width: 98%;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .head {
+    margin: 5px auto 0px auto;
+    width: 60%;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .headinfo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .head .notsup {
+    top: 21%;
+    right: 30%;
+  }
+}

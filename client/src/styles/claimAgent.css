@@ -1,0 +1,94 @@
+.claim_wrapper {
+  background-color: white;
+  height: 100vh;
+  padding: 5px 0px;
+}
+
+.claim {
+  flex-direction: column;
+  margin: 0px 5px;
+  display: flex;
+}
+
+.claim input {
+  padding: 15px 10px;
+  border-radius: 10px;
+  color: black;
+  border: 1px solid #d9e7e2;
+  font-family: system-ui, Segoe UI, sans-serif, color-emoji;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.claim input:focus {
+  outline: none;
+}
+
+.claim .checkstatus i {
+  align-items: center;
+  flex-direction: row;
+  font-size: 12px;
+  display: flex;
+  margin-left: 5px;
+}
+
+.claim .checkstatus i .icon {
+  font-size: 15px;
+}
+
+.claim .checkstatus .taken {
+  color: #dd2334;
+}
+
+.claim .checkstatus .available {
+  color: green;
+}
+.claim small {
+  color: #dd2334;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.claim button:enabled {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  background-color: #dd2334;
+  color: white;
+  font-weight: bold;
+  border: none;
+  margin-top: 2rem;
+  padding: 15px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.claim button:disabled {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  background-color: #d9e7e2;
+  font-weight: bold;
+  border: none;
+  margin-top: 2rem;
+  padding: 15px 10px;
+  border-radius: 10px;
+  cursor: not-allowed;
+  font-size: 15px;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .claim_wrapper {
+    margin: 5px 20% 5px auto;
+    width: 40%;
+  }
+
+  .claim button:enabled,
+  .claim button:disabled {
+    margin-top: 3rem;
+  }
+
+  .status {
+    right: 22%;
+    top: 25%;
+  }
+}

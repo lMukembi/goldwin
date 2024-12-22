@@ -1,0 +1,27 @@
+.homewrapper {
+  background-color: white;
+  padding: 5px 0px;
+}
+
+.homewrapper .homehr {
+  border-top: 1px;
+  margin: 5px auto;
+  width: 98%;
+}
+
+.homewrapper .homefooter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .homewrapper {
+    border-top: 1px;
+    margin: 5px 20% 5px auto;
+    width: 40%;
+  }
+}

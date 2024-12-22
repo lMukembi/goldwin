@@ -1,0 +1,116 @@
+.addproduct {
+  height: fit-content;
+  background-color: white;
+  padding: 5px 0px;
+}
+
+.addproduct form {
+  padding: 0px 5px;
+}
+
+.addproduct .statusimage {
+  left: 8rem;
+  bottom: 1rem;
+}
+
+.addproduct .statusimage span {
+  display: flex;
+}
+
+.addproduct .statusimage span img {
+  height: 100px;
+  margin-left: 10px;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.addproduct .statusimage span small {
+  color: #d9e7e2;
+  cursor: pointer;
+}
+
+.addproduct form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 5px;
+}
+
+.addproduct form input {
+  padding: 15px 10px;
+  border-radius: 10px;
+  margin: 10px 0px;
+  border: 1px solid #d9e7e2;
+  color: black;
+  outline: none;
+  font-family: system-ui, Segoe UI, sans-serif, color-emoji;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.addproduct form button {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  justify-content: center;
+  background-color: #dd2334;
+  border: 0px;
+  color: white;
+  cursor: pointer;
+}
+
+.addproduct .product {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #d9e7e2;
+  border-radius: 10px;
+  margin: 10px 5px;
+}
+
+.addproduct .product {
+  align-items: center;
+}
+
+.addproduct .product img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.addproduct .product button {
+  background-color: #d9e7e2;
+  border: 1px solid green;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.addproduct .product button a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: green;
+}
+
+.addproduct .product button .downloadicon {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .addproduct {
+    margin: 5px 20% 5px auto;
+    width: 40%;
+  }
+}

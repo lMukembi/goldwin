@@ -1,0 +1,136 @@
+.notifications {
+  background-color: white;
+  height: 100vh;
+  padding: 5px 0px;
+  overflow-y: scroll;
+}
+
+.notifications h3 {
+  margin-left: 5px;
+}
+
+.notifications .tab {
+  justify-content: space-around;
+  padding: 5px 10px;
+  display: flex;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow-x: scroll;
+}
+
+.notifications .tab div {
+  margin: 0px 10px;
+  padding: 0px 10px;
+  cursor: pointer;
+}
+
+/* NOTIFICATIONS CARD */
+
+.notification_card_details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #d9e7e2;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 5px;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.notification_card_top {
+  display: flex;
+  align-items: center;
+}
+
+.notification_card_top img {
+  background-color: #d9e7e2 !important;
+}
+
+.notification_card_icon {
+  padding: 5px;
+  font-size: 30px;
+  color: green;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-right: 5px;
+}
+
+.transaction_card_icon {
+  padding: 5px 10px;
+}
+
+.notification_card_text {
+  font-size: 15px;
+}
+
+.notification_card_amt {
+  white-space: nowrap;
+  margin: 0px 10px;
+}
+
+.notification_card_time {
+  font-size: x-small !important;
+}
+
+.confirm {
+  color: green;
+  white-space: nowrap;
+  margin: 0px 10px;
+}
+
+.notification_card_details .dropdown {
+  margin: 10px 0px;
+  width: 100%;
+}
+
+.notification_card_details .dropdown select {
+  padding: 5px 10px;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+  font-family: system-ui, Segoe UI, sans-serif, color-emoji;
+  font-style: normal;
+  border: 1px solid #d9e7e2;
+  cursor: pointer;
+}
+
+.notification_card_details .dropdown select::-webkit-scrollbar {
+  display: none;
+}
+
+.notification_card_details .dropdown select option {
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+}
+
+.notification_card_details button {
+  background-color: green;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 0px;
+  color: white;
+  padding: 5px;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .notifications {
+    margin: 5px 20% 5px auto;
+    width: 40%;
+  }
+
+  .notifications::-webkit-scrollbar {
+    display: none;
+  }
+
+  .notifications .tab::-webkit-scrollbar {
+    display: none;
+  }
+
+  .notification_card_details {
+    width: 97%;
+  }
+}

@@ -1,0 +1,80 @@
+.invests_wrapper {
+  background-color: white;
+  padding: 5px 0px;
+  height: 100vh;
+}
+
+.invests {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.invests input {
+  padding: 15px 10px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  border: 1px solid #d9e7e2;
+  outline: none;
+  font-family: system-ui, Segoe UI, sans-serif, color-emoji;
+  font-style: normal;
+  color: black;
+}
+
+.invests .invests_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.invests small {
+  color: #d9e7e2;
+}
+
+.invests small:nth-of-type(1) {
+  margin: 0px 10px 2rem 0px;
+}
+
+.invests small:nth-of-type(2) {
+  color: #d9e7e2;
+}
+
+.invests small:nth-last-child(3) {
+  color: #dd2334;
+}
+
+.invests button:enabled {
+  border: none;
+  border-radius: 10px;
+  background-color: #dd2334;
+  margin-top: 5px;
+  font-weight: bold;
+  padding: 15px 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.invests button:disabled {
+  border: none;
+  border-radius: 10px;
+  background-color: #d9e7e2;
+  margin-top: 5px;
+  font-weight: bold;
+  padding: 15px 10px;
+  cursor: not-allowed;
+  color: white;
+  font-size: 15px;
+}
+
+.invest_profit {
+  font-style: italic;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 768px) {
+  .invests_wrapper {
+    margin: 5px 20% 5px auto;
+    width: 40%;
+  }
+}
