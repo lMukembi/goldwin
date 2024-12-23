@@ -8,10 +8,10 @@ exports.deposit = async (req, res, next) => {
 
   const accessToken = req.accessToken;
 
-  const depositUrl =
-    "https://sandbox.sasapay.app/api/v1/payments/request-payment/";
+  const depositUrl = "https://sasapay.app/api/v1/payments/request-payment/";
 
   const date = new Date();
+
   const timestamp =
     date.getFullYear() +
     ("0" + (date.getMonth() + 1)).slice(-2) +
@@ -26,7 +26,7 @@ exports.deposit = async (req, res, next) => {
     "Transaction Fee": "0",
     Currency: "KES",
     Amount: `${amount}`,
-    CallBackURL: "https://a3f6-102-0-13-126.ngrok-free.app/api/sasaPay/results",
+    CallBackURL: "https://api.goldwinadverts.com/sasaPay/results",
     PhoneNumber: `${phone}`,
     TransactionDesc: "Request Payment",
     AccountReference: timestamp,
@@ -53,19 +53,7 @@ exports.deposit = async (req, res, next) => {
 exports.callback = async (req, res, next) => {
   /* DEPOSIT RESULTS */
 
-  // const MerchantRequestID = req.body.MerchantRequestID;
-  // const CheckoutRequestID = req.body.CheckoutRequestID;
-  // const PaymentRequestID = req.body.PaymentRequestID;
-  // const ResultCode = req.body.ResultCode;
-  // const ResultDesc = req.body.ResultDesc;
-  // const SourceChannel = req.body.SourceChannel;
-  // const TransAmount = req.body.TransAmount;
-  // const RequestedAmount = req.body.RequestedAmount;
-
   req.Paid = req.body.Paid;
-
-  // const BillRefNumber = req.body.BillRefNumber;
-  // const TransactionDate = req.body.TransactionDate;
 
   req.CustomerMobile = req.body.CustomerMobile;
 
@@ -74,10 +62,6 @@ exports.callback = async (req, res, next) => {
   req.accessToken = req.accessToken;
 
   req.ThirdPartyTransID = req.body.ThirdPartyTransID;
-
-  /* WITHDRAW RESULTS */
-
-  console.log(req.body);
 
   next();
 };
@@ -88,7 +72,7 @@ exports.withdraw = async (req, res) => {
 
   const accessToken = req.accessToken;
 
-  const withdrawUrl = "https://sandbox.sasapay.app/api/v1/payments/b2c/";
+  const withdrawUrl = "https://sasapay.app/api/v1/payments/b2c/";
 
   const date = new Date();
   const timestamp =
@@ -107,7 +91,7 @@ exports.withdraw = async (req, res) => {
     ReceiverNumber: `${phone}`,
     Channel: "63902",
     Reason: "Salary payment",
-    CallBackURL: "https://a3f6-102-0-13-126.ngrok-free.app/api/sasaPay/results",
+    CallBackURL: "https://api.goldwinadverts.com/sasaPay/results",
   };
 
   const headers = {
@@ -136,7 +120,7 @@ exports.verify = async (req, res) => {
   const mpesaTransID = req.ThirdPartyTransID;
   const paidStatus = req.Paid;
 
-  const verifyUrl = "https://sandbox.sasapay.app/api/v1/transactions/verify/";
+  const verifyUrl = "https://sasapay.app/api/v1/transactions/verify/";
 
   const data = {
     MerchantCode: "600980",

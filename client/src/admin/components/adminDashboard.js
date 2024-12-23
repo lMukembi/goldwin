@@ -10,7 +10,7 @@ import { AdminWithdrawCard } from "./adminWithdrawCard";
 import { AdminMenu } from "./adminMenu";
 import { AdminHeader } from "./adminHeader";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const AdminDashboard = () => {
   const adminData = JSON.parse(localStorage.getItem("JSUD"));

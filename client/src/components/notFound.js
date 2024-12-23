@@ -4,7 +4,7 @@ import { Header } from "./header";
 import { Link, redirect } from "react-router-dom";
 import axios from "axios";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const NotFound = () => {
   const [userInfo, setUserInfo] = useState({});

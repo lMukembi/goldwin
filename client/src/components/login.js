@@ -8,7 +8,7 @@ import { Home } from "./home";
 import "../styles/login.css";
 import axios from "axios";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Login = () => {
   const [email, setEmail] = useState("");

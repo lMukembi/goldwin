@@ -14,7 +14,7 @@ const { transporter } = require("./emailTransporter");
 exports.welcomeEmail = async (email, username) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "Welcome email",
       text: "Welcome email",
@@ -28,7 +28,7 @@ exports.welcomeEmail = async (email, username) => {
 exports.tokenEmail = async (email, username, serviceToken, secret) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "Premium code received",
       text: "Premium code received",
@@ -45,7 +45,7 @@ exports.tokenEmail = async (email, username, serviceToken, secret) => {
 exports.agentTokenEmail = async (email, username, withdrawableBalance) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "You received 75% premium code profit",
       text: "You received 75% premium code profit",
@@ -61,7 +61,7 @@ exports.agentTokenEmail = async (email, username, withdrawableBalance) => {
 exports.packageEmail = async (email, username, servicePackage) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "Package received",
       text: "Package received",
@@ -77,7 +77,7 @@ exports.packageEmail = async (email, username, servicePackage) => {
 exports.agentPackageEmail = async (email, username, withdrawableBalance) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "You received 85% package profit",
       text: "You received 85% package profit",
@@ -93,7 +93,7 @@ exports.agentPackageEmail = async (email, username, withdrawableBalance) => {
 exports.agentCashbackEmail = async (email, username, withdrawableBalance) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "You received 66% Cashback profit",
       text: "You received 66% Cashback profit",
@@ -109,7 +109,7 @@ exports.agentCashbackEmail = async (email, username, withdrawableBalance) => {
 exports.whatsappEmail = async (email, username) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "Submit success",
       text: "Submit successful",
@@ -123,7 +123,7 @@ exports.whatsappEmail = async (email, username) => {
 exports.withdrawEmail = async (email, username) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "Withdrwal success",
       text: "Withdrwal successful",
@@ -137,7 +137,7 @@ exports.withdrawEmail = async (email, username) => {
 exports.clientEmail = async (email, username, message) => {
   try {
     return await transporter.sendMail({
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "Client support",
       text: "Client support",

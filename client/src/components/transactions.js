@@ -5,7 +5,7 @@ import axios from "axios";
 import { TransactionCard } from "./transactionCard";
 import { redirect } from "react-router-dom";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Transactions = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

@@ -5,7 +5,7 @@ import { toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const AdminWithdrawCard = ({ withdrawalMessage }) => {
   const [value, setValue] = useState("");

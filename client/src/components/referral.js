@@ -6,7 +6,7 @@ import { GrLink } from "react-icons/gr";
 import axios from "axios";
 import { redirect } from "react-router-dom";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Referal = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));
@@ -16,7 +16,7 @@ export const Referal = () => {
   const [userInfo, setUserInfo] = useState({});
   const [userPackageExpireAt, setUserPackageExpireAt] = useState(null);
 
-  const referalLink = `http://46.202.173.77:3000/SrBcNEtXZJlucFR/${userInfo.username}`;
+  const referalLink = `https://goldwinadverts.com/SrBcNEtXZJlucFR/${userInfo.username}`;
 
   const handleCopy = () => {
     if (userPackageExpireAt === null && userInfo.referralID !== "ceo") {

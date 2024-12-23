@@ -13,7 +13,7 @@ import { Login } from "./login";
 import { GoGift } from "react-icons/go";
 import { BsPiggyBank } from "react-icons/bs";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Earnings = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

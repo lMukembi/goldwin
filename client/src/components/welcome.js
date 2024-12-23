@@ -4,7 +4,7 @@ import { Login } from "./login";
 import { redirect } from "react-router-dom";
 import { BsPersonCheck } from "react-icons/bs";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Welcome = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

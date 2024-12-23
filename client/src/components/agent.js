@@ -8,7 +8,7 @@ import "../styles/signup.css";
 import { Home } from "./home";
 import axios from "axios";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Agent = () => {
   const { username } = useParams();

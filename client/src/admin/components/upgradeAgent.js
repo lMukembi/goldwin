@@ -10,7 +10,7 @@ import { Header } from "../../components/header";
 import { Login } from "../../components/login";
 import { MdDoDisturb } from "react-icons/md";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const UpgradeAgent = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

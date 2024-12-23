@@ -211,15 +211,15 @@ exports.forgotPassword = async (req, res) => {
       port: 587,
       secure: false, // true for port 465, false for other ports
       auth: {
-        user: "mukembileviticus@gmail.com",
-        pass: "hzic ebgl phhx xkka",
+        user: "goldwinadverts@gmail.com",
+        pass: "utez ilft sujd zdap",
       },
     });
 
-    const resetUrl = `http://46.202.173.77:3000/reset-password/${token}`;
+    const resetUrl = `https://goldwinadverts.com/reset-password/${token}`;
 
     const mailOptions = {
-      from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',
+      from: '"Goldwin Adverts" <goldwinadverts@gmail.com>',
       to: email,
       subject: "Reset password",
       text: "Reset password",

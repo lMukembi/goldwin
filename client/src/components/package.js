@@ -23,7 +23,7 @@ import { Login } from "./login";
 import { PiCertificateLight } from "react-icons/pi";
 import { IoBagHandleOutline } from "react-icons/io5";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Package = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

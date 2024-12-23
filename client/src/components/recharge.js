@@ -11,7 +11,7 @@ import { Login } from "./login";
 import axios from "axios";
 import { Menu } from "./menu";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Recharge = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

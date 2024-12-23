@@ -7,7 +7,7 @@ import { redirect, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Menu } from "./menu";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Loans = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

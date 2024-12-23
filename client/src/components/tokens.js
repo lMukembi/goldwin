@@ -8,7 +8,7 @@ import { Menu } from "./menu";
 import { toast, Bounce } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const goldwinAPI = "http://46.202.173.77:8000";
+const goldwinAPI = "https://api.goldwinadverts.com";
 
 export const Tokens = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));
