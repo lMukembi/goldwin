@@ -6,6 +6,7 @@ const connectionDB = require("./connection.js");
 require("dotenv").config();
 const app = express();
 const port = 8000;
+const MONGO_URI = "mongodb://127.0.0.1:27017";
 
 app.use(express.json());
 app.use(
@@ -30,12 +31,12 @@ app.use("/api/transfer", require("./routes/transfer"));
 app.use("/api/receiver", require("./routes/receiver.js"));
 
 app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "/frontend/public/index.html"));
+  res.sendFile(path.join(__dirname, "/client/public/index.html"));
 });
 
 const DBConnection = async () => {
   try {
-    await connectionDB(process.env.MONGO_URI);
+    await connectionDB(MONGO_URI);
 
     app.listen(port, () => {
       console.log(`server is running on port, ${port}`);
