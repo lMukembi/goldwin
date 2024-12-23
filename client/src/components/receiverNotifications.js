@@ -3,7 +3,7 @@ import "../styles/notifications.css";
 import axios from "axios";
 import { ReceiverCard } from "./receiverCard";
 
-const goldwinAPI = process.env.SERVER_URL;
+const goldwinAPI = "http://46.202.173.77:8000";
 
 export const ReceiverNotifications = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

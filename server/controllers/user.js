@@ -216,7 +216,7 @@ exports.forgotPassword = async (req, res) => {
       },
     });
 
-    const resetUrl = `http://localhost:3000/reset-password/${token}`;
+    const resetUrl = `http://46.202.173.77:3000/reset-password/${token}`;
 
     const mailOptions = {
       from: '"Goldwin Adverts" <mukembileviticus@gmail.com>',

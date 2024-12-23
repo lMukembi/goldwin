@@ -8,7 +8,7 @@ import "../styles/signup.css";
 import { Home } from "./home";
 import axios from "axios";
 
-const goldwinAPI = process.env.SERVER_URL;
+const goldwinAPI = "http://46.202.173.77:8000";
 
 export const Signup = () => {
   const { username } = useParams();

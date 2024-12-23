@@ -6,7 +6,7 @@ import { Home } from "../../components/home";
 import "../../styles/signup.css";
 import axios from "axios";
 
-const goldwinAPI = process.env.SERVER_URL;
+const goldwinAPI = "http://46.202.173.77:8000";
 
 export const AdminSignup = () => {
   const navigate = useNavigate();

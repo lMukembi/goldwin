@@ -5,7 +5,7 @@ import {
   WITHDRAW_SUCCESS,
 } from "../constants/mpesa";
 
-const goldwinAPI = process.env.SERVER_URL;
+const goldwinAPI = "http://46.202.173.77:8000";
 
 export const upgrade = (packageData) => async (dispatch) => {
   const data = localStorage.getItem("newUser");

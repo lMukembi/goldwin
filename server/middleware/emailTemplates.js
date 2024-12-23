@@ -93,7 +93,7 @@ exports.welcomeEmail = `
           </li>
         </ul>
         <p>This is an automated message, please do not reply.</p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Get Started
         </a>
       </div>
@@ -298,7 +298,7 @@ exports.tokenEmail = `
         <p>
         NB: Don't miss out! Redeem your cashback before the week ends, or it will be cleared. Take action now and boost your earnings. Happy profits!
         </p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Visit Dashboard
         </a>
       </div>
@@ -398,7 +398,7 @@ exports.agentTokenEmail = `
         <p>
         Congratulations, agent {name}! Your hard work with Goldwin Adverts has earned you a 75% profit on the {code} Token, worth KES {commission}. Keep promoting our brand for a chance to win big cashbacks in the next round. Happy profits!
         </p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Visit Dashboard
         </a>
         </div>
@@ -501,7 +501,7 @@ exports.packageEmail = `
         <p>
         NB: Don't miss out! Redeem your cashback before the week ends, or it will be cleared. Take action now and boost your earnings. Happy profits!
         </p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Visit Dashboard
         </a>
       </div>
@@ -601,7 +601,7 @@ exports.agentPackageEmail = `
         <p>
         Congratulations, agent {name}! Your hard work with Goldwin Adverts has earned you a 85% profit on the package, worth KES {commission}. Keep promoting our brand for a chance to win big cashbacks in the next round. Happy profits!
         </p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Visit Dashboard
         </a>
         </div>
@@ -701,7 +701,7 @@ exports.agentCashbackEmail = `
         <p>
         Congratulations, agent {name}! Your hard work with Goldwin Adverts has earned you a 66% profit on Cashback Redemption, worth KES {commission}. Keep promoting our brand for a chance to win big cashbacks in the next round. Happy profits!
         </p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Visit Dashboard
         </a>
         </div>
@@ -802,7 +802,7 @@ exports.whatsappEmail = `
           Goldwin Adverts has been credited KES {amount} to your account. You may withdraw. Happy profits!
         </p>
         <p>This is an automated message, please do not reply.</p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Visit Dashboard
         </a>
       </div>
@@ -908,12 +908,12 @@ exports.withdrawEmail = `
         </p>
         <p>
           If you don't recognize this activity please
-          <a href="http://localhost:3000/reset-password" class="link">Reset Password</a> or
-          <a href="http://localhost:3000/contact-us" class="link">Contact Support</a>
+          <a href="http://46.202.173.77:3000/reset-password" class="link">Reset Password</a> or
+          <a href="http://46.202.173.77:3000/contact-us" class="link">Contact Support</a>
           immediately.
         </p>
         <p>This is an automated message, please do not reply.</p>
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Visit Dashboard
         </a>
       </div>
@@ -1012,7 +1012,7 @@ exports.clientEmail = `
       <div class="content">
         <p class="client-message">Client: {name},</p>
         <p>{message}</p>        
-        <a href="http://localhost:3000" class="button">
+        <a href="http://46.202.173.77:3000" class="button">
           Go to Homepage
         </a>
       </div>

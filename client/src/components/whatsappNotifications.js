@@ -4,7 +4,7 @@ import axios from "axios";
 import { WhatsappCard } from "./whatsappCard";
 import { redirect } from "react-router-dom";
 
-const goldwinAPI = process.env.SERVER_URL;
+const goldwinAPI = "http://46.202.173.77:8000";
 
 export const WhatsappNotifications = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

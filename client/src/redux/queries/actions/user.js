@@ -6,7 +6,7 @@ import {
   REGISTER_SUCCESS,
 } from "../constants/user";
 
-const apexAPI = "http://localhost:8000";
+const apexAPI = "http://46.202.173.77:8000";
 
 // Register user
 export const register = (formData) => async (dispatch) => {

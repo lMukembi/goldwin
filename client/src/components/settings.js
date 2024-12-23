@@ -9,7 +9,7 @@ import { Login } from "./login";
 import axios from "axios";
 import { Menu } from "./menu";
 
-const goldwinAPI = process.env.SERVER_URL;
+const goldwinAPI = "http://46.202.173.77:8000";
 
 export const Settings = () => {
   const userData = JSON.parse(localStorage.getItem("JSUD"));

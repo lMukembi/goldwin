@@ -7,7 +7,7 @@ import Logo from "../assets/images/Logo.png";
 import "../styles/resetPassword.css";
 import axios from "axios";
 
-const goldwinAPI = process.env.SERVER_URL;
+const goldwinAPI = "http://46.202.173.77:8000";
 
 export const ResetPassword = () => {
   const [password, setPassword] = useState("");
