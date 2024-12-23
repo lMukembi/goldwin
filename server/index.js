@@ -11,7 +11,7 @@ const MONGO_URI = "mongodb://127.0.0.1:27017";
 app.use(express.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000"],
+    origin: "https://goldwinadverts.com",
     credentials: true,
     exposedHeaders: ["ip"],
   })
