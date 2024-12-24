@@ -41,7 +41,7 @@ export const Welcome = () => {
           {userInfo.referralID === "ceo" && (
             <div className="verified">
               <BsPersonCheck />
-              <span>Verified Agent</span>
+              <span>Verified</span>
             </div>
           )}
         </div>

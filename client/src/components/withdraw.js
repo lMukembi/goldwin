@@ -77,7 +77,10 @@ export const Withdraw = () => {
     let afterDeduction = 0.95 * amount;
 
     try {
-      if (userInfo.referralID !== "ceo" || value !== withdrawableBalance) {
+      if (
+        (userInfo.referralID !== "ceo" || value !== withdrawableBalance) &&
+        withdrawableBalance >= 1000
+      ) {
         const res = await axios.post(
           `${goldwinAPI}/api/withdraw/${userID}/new-withdrawal`,
           {
@@ -103,7 +106,11 @@ export const Withdraw = () => {
           );
         }
       } else {
-        if (userInfo.referralID === "ceo" && value === withdrawableBalance) {
+        if (
+          userInfo.referralID === "ceo" &&
+          value === withdrawableBalance &&
+          withdrawableBalance >= 1000
+        ) {
           const res = await axios.post(
             `${goldwinAPI}/api/withdraw/${userID}/new-withdrawal`,
             {
@@ -172,6 +179,24 @@ export const Withdraw = () => {
       return navigate("/login");
     }
 
+    if (withdrawableBalance < 1000) {
+      return toast.warn(
+        `Hi ${userInfo.username}, You're required to have a minimum of KES 1,000.00 to make a withdrwal.`,
+        {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+          icon: false,
+        }
+      );
+    }
+
     try {
       const res = await axios.patch(
         `${goldwinAPI}/api/user/${userData.SESSID}/balance`,
@@ -206,6 +231,24 @@ export const Withdraw = () => {
 
     if (userData === null) {
       return navigate("/login");
+    }
+
+    if (whatsappBalance < 1000) {
+      return toast.warn(
+        `Hi ${userInfo.username}, You're required to have a minimum of KES 1,000.00 to make a withdrwal.`,
+        {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+          icon: false,
+        }
+      );
     }
 
     try {
@@ -261,6 +304,24 @@ export const Withdraw = () => {
 
     if (userData === null) {
       return navigate("/login");
+    }
+
+    if (userInfo.investmentsBalance < 1000) {
+      return toast.warn(
+        `Hi ${userInfo.username}, You're required to have a minimum of KES 1,000.00 to make a withdrwal.`,
+        {
+          position: "top-right",
+          autoClose: 4000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+          icon: false,
+        }
+      );
     }
 
     try {

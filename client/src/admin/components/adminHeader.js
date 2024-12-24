@@ -142,7 +142,7 @@ export const AdminHeader = () => {
               </div>
 
               <div>
-                <Link to="/settings">
+                <Link to="">
                   <TbSettingsPlus className="icon" />
                 </Link>
               </div>
