@@ -346,8 +346,10 @@ export const Earnings = () => {
                 {whatsappBalanceBar !== isNaN && (
                   <span style={{ width: `${whatsappBalanceBar}%` }}></span>
                 )}
-                {whatsappBalanceBar !== isNaN && (
+                {whatsappBalanceBar !== isNaN ? (
                   <span>{whatsappBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -371,8 +373,11 @@ export const Earnings = () => {
                     style={{ width: `${whatsappWithdrawnBalanceBar}%` }}
                   ></span>
                 )}
-                {whatsappWithdrawnBalanceBar !== isNaN && (
+
+                {whatsappWithdrawnBalanceBar !== isNaN ? (
                   <span>{whatsappWithdrawnBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -409,8 +414,11 @@ export const Earnings = () => {
                 {cashackBalanceBar !== isNaN && (
                   <span style={{ width: `${cashackBalanceBar}%` }}></span>
                 )}
-                {cashackBalanceBar !== isNaN && (
+
+                {cashackBalanceBar !== isNaN ? (
                   <span>{cashackBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -433,8 +441,10 @@ export const Earnings = () => {
                 {spinningBalanceBar !== isNaN && (
                   <span style={{ width: `${spinningBalanceBar}%` }}></span>
                 )}
-                {spinningBalanceBar !== isNaN && (
+                {spinningBalanceBar !== isNaN ? (
                   <span>{spinningBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -456,7 +466,11 @@ export const Earnings = () => {
                 {loansBalanceBar !== isNaN && (
                   <span style={{ width: `${loansBalanceBar}%` }}></span>
                 )}
-                {loansBalanceBar !== isNaN && <span>{loansBalanceBar}%</span>}
+                {loansBalanceBar !== isNaN ? (
+                  <span>{loansBalanceBar}%</span>
+                ) : (
+                  <>0%</>
+                )}
               </div>
             </div>
 
@@ -477,8 +491,10 @@ export const Earnings = () => {
                 {investmentsBalanceBar !== isNaN && (
                   <span style={{ width: `${investmentsBalanceBar}%` }}></span>
                 )}
-                {investmentsBalanceBar !== isNaN && (
+                {investmentsBalanceBar !== isNaN ? (
                   <span>{investmentsBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -500,8 +516,10 @@ export const Earnings = () => {
                 {academicBalanceBar !== isNaN && (
                   <span style={{ width: `${academicBalanceBar}%` }}></span>
                 )}
-                {academicBalanceBar !== isNaN && (
+                {academicBalanceBar !== isNaN ? (
                   <span>{academicBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -523,8 +541,10 @@ export const Earnings = () => {
                 {depositBalanceBar !== isNaN && (
                   <span style={{ width: `${depositBalanceBar}%` }}></span>
                 )}
-                {depositBalanceBar !== isNaN && (
+                {depositBalanceBar !== isNaN ? (
                   <span>{depositBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -546,8 +566,10 @@ export const Earnings = () => {
                 {withdrawableBalanceBar !== isNaN && (
                   <span style={{ width: `${withdrawableBalanceBar}%` }}></span>
                 )}
-                {withdrawableBalanceBar !== isNaN && (
+                {withdrawableBalanceBar !== isNaN ? (
                   <span>{withdrawableBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
@@ -571,8 +593,10 @@ export const Earnings = () => {
                     style={{ width: `${agentWithdrawnBalanceBar}%` }}
                   ></span>
                 )}
-                {agentWithdrawnBalanceBar !== isNaN && (
+                {agentWithdrawnBalanceBar !== isNaN ? (
                   <span>{agentWithdrawnBalanceBar}%</span>
+                ) : (
+                  <>0%</>
                 )}
               </div>
             </div>
