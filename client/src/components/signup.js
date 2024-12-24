@@ -206,10 +206,12 @@ export const Signup = () => {
         {userInfo.username !== userName && (
           <span className="checkstatus">
             {usernameValidation === true && userName.length >= 3 && (
-              <i className="available">{validField} Username available.</i>
+              <small className="available">
+                {validField} Username available.
+              </small>
             )}
             {usernameValidation === false && userName.length >= 3 && (
-              <i className="taken">{invalidField} Username taken.</i>
+              <small className="taken">{invalidField} Username taken.</small>
             )}
           </span>
         )}
@@ -229,10 +231,10 @@ export const Signup = () => {
         {userInfo.phone !== `254${phone.substring(1)}` && (
           <span className="checkstatus">
             {phoneValidation === true && phone.length === 10 && (
-              <i className="available">{validField} Phone available.</i>
+              <small className="available">{validField} Phone available.</small>
             )}
             {phoneValidation === false && phone.length === 10 && (
-              <i className="taken">{invalidField} Phone taken.</i>
+              <small className="taken">{invalidField} Phone taken.</small>
             )}
           </span>
         )}
@@ -251,13 +253,13 @@ export const Signup = () => {
         {userInfo.email !== email && (
           <span className="checkstatus">
             {emailValidation === true && (
-              <i className="available">{validField} Email available.</i>
+              <small className="available">{validField} Email available.</small>
             )}
             {emailValidation === false && email.length > 0 && validEmail && (
-              <i className="taken">{invalidField} Email taken.</i>
+              <small className="taken">{invalidField} Email taken.</small>
             )}
             {!validEmail && emailValidation === false && email.length > 5 && (
-              <i className="taken">{invalidField} Invalid email.</i>
+              <small className="taken">{invalidField} Invalid email.</small>
             )}
           </span>
         )}

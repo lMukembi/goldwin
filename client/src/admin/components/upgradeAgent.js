@@ -148,15 +148,21 @@ export const UpgradeAgent = () => {
               {userInfo.username !== username &&
                 usernameValidation === true &&
                 username.length > 0 && (
-                  <i className="available">{validField} Username available.</i>
+                  <small className="available">
+                    {validField} Username available.
+                  </small>
                 )}
 
               {usernameValidation === false && username.length > 0 && (
-                <i className="taken">{invalidField} Username not available.</i>
+                <small className="taken">
+                  {invalidField} Username not available.
+                </small>
               )}
 
               {username === "ceo" && usernameValidation === true && (
-                <i className="taken">{invalidUsername} Username blocked.</i>
+                <small className="taken">
+                  {invalidUsername} Username blocked.
+                </small>
               )}
             </span>
 

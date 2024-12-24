@@ -24,7 +24,7 @@
   margin-top: 2rem;
 }
 
-.transfer .checkstatus i {
+.transfer .checkstatus small {
   align-items: center;
   flex-direction: row;
   font-size: 12px;
@@ -32,7 +32,7 @@
   margin-left: 5px;
 }
 
-.transfer .checkstatus i .icon {
+.transfer .checkstatus small .icon {
   font-size: 15px;
 }
 

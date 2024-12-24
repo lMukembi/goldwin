@@ -257,15 +257,19 @@ export const Transfer = () => {
               {userInfo.username !== username &&
                 usernameValidation === true &&
                 username.length > 0 && (
-                  <i className="available">{validField} Username available.</i>
+                  <small className="available">
+                    {validField} Username available.
+                  </small>
                 )}
               {userInfo.username === username && username.length > 0 && (
-                <i className="taken">
+                <small className="taken">
                   {invalidUsername} You can't send to yourself.
-                </i>
+                </small>
               )}
               {usernameValidation === false && username.length > 0 && (
-                <i className="taken">{invalidField} Username not available.</i>
+                <small className="taken">
+                  {invalidField} Username not available.
+                </small>
               )}
             </span>
 

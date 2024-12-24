@@ -26,7 +26,7 @@
   outline: none;
 }
 
-.signup .checkstatus i {
+.signup .checkstatus small {
   align-items: center;
   flex-direction: row;
   font-size: 12px;
@@ -34,7 +34,7 @@
   margin-left: 5px;
 }
 
-.signup .checkstatus i .icon {
+.signup .checkstatus small .icon {
   font-size: 15px;
 }
 

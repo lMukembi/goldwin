@@ -248,23 +248,27 @@ export const Claim = () => {
                 agentInfo.referralID !== adminUsername &&
                 agentInfo.referralID !== userInfo.username &&
                 username.length > 0 && (
-                  <i className="available">{validField} Username available.</i>
+                  <small className="available">
+                    {validField} Username available.
+                  </small>
                 )}
 
               {(userInfo.username === username ||
                 agentInfo.referralID === adminUsername ||
                 agentInfo.referralID === userInfo.username) &&
                 username.length > 0 && (
-                  <i className="taken">{invalidUsername} Username blocked.</i>
+                  <small className="taken">
+                    {invalidUsername} Username blocked.
+                  </small>
                 )}
 
               {usernameValidation === false &&
                 agentInfo.referralID !== adminUsername &&
                 agentInfo.referralID !== userInfo.username &&
                 username.length > 0 && (
-                  <i className="taken">
+                  <small className="taken">
                     {invalidField} Username not available.
-                  </i>
+                  </small>
                 )}
             </span>
 

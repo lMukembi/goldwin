@@ -208,12 +208,14 @@ export const Settings = () => {
               {userInfo.username !== username && (
                 <span className="checkstatus">
                   {usernameValidation === true && username.length >= 3 && (
-                    <i className="available">
+                    <small className="available">
                       {validField} Username available.
-                    </i>
+                    </small>
                   )}
                   {usernameValidation === false && username.length >= 3 && (
-                    <i className="taken">{invalidField} Username taken.</i>
+                    <small className="taken">
+                      {invalidField} Username taken.
+                    </small>
                   )}
                 </span>
               )}
@@ -233,10 +235,12 @@ export const Settings = () => {
               {userInfo.phone !== `254${phone.substring(1)}` && (
                 <span className="checkstatus">
                   {phoneValidation === true && phone.length === 10 && (
-                    <i className="available">{validField} Phone available.</i>
+                    <small className="available">
+                      {validField} Phone available.
+                    </small>
                   )}
                   {phoneValidation === false && phone.length === 10 && (
-                    <i className="taken">{invalidField} Phone taken.</i>
+                    <small className="taken">{invalidField} Phone taken.</small>
                   )}
                 </span>
               )}
@@ -255,10 +259,12 @@ export const Settings = () => {
               {userInfo.email !== email && (
                 <span className="checkstatus">
                   {emailValidation === true && (
-                    <i className="available">{validField} Email available.</i>
+                    <small className="available">
+                      {validField} Email available.
+                    </small>
                   )}
                   {emailValidation === false && email.length > 0 && (
-                    <i className="taken">{invalidField} Email taken.</i>
+                    <small className="taken">{invalidField} Email taken.</small>
                   )}
                 </span>
               )}
