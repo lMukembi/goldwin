@@ -42,7 +42,7 @@ const userSchema = new mongoose.Schema(
 
     depositBalance: {
       type: Number,
-      default: 30000,
+      default: 0,
     },
 
     withdrawableBalance: {
