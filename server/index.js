@@ -7,15 +7,14 @@ require("dotenv").config();
 const app = express();
 const port = 8000;
 const MONGO_URI = "mongodb://goldwin:1919@127.0.0.1:27017/goldwinadverts";
+const corsOptions = {
+  origin: ["https://goldwinadverts.com", "https://www.goldwinadverts.com"],
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"],
+  credentials: true,
+  exposedHeaders: "*",
+};
 
-app.use(express.json());
-app.use(
-  cors({
-    origin: "https://goldwinadverts.com",
-    methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
-  })
-);
-
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "client", "build")));
