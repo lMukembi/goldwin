@@ -6,6 +6,9 @@ const { welcomeEmail } = require("../middleware/successEmails");
 exports.signup = async (req, res) => {
   const { email, username, password, secretCode } = req.body;
 
+  const JWT_SECRET =
+    "S3bwFeWy4VRrFDQ3r0vDircfvsAH3k7AIwg4DVCm8VhTfI/w8YHF3M0ZG+gCkbWwS1xYj1bVl8liAuETKkElGg==";
+
   const salt = bcrypt.genSaltSync(10);
   const hash = bcrypt.hashSync(password, salt);
 
@@ -21,8 +24,8 @@ exports.signup = async (req, res) => {
   await welcomeEmail(createdAdmin.email, createdAdmin.username);
 
   const adminID = { id: createdAdmin.id };
-  const tokenID = jwt.sign(adminID, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
+  const tokenID = jwt.sign(adminID, JWT_SECRET, {
+    expiresIn: "24h",
   });
 
   res.status(200).json({
@@ -37,6 +40,9 @@ exports.login = async (req, res) => {
   const { email, password, secretCode } = req.body;
 
   const admin = await Admin.findOne({ email });
+
+  const JWT_SECRET =
+    "S3bwFeWy4VRrFDQ3r0vDircfvsAH3k7AIwg4DVCm8VhTfI/w8YHF3M0ZG+gCkbWwS1xYj1bVl8liAuETKkElGg==";
 
   if (admin.secretCode !== secretCode) {
     return res.status(401).json({
@@ -57,8 +63,8 @@ exports.login = async (req, res) => {
   }
 
   const adminID = { id: admin.id };
-  const tokenID = jwt.sign(adminID, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
+  const tokenID = jwt.sign(adminID, JWT_SECRET, {
+    expiresIn: "24h",
   });
 
   return res

@@ -33,6 +33,8 @@ exports.authToken = async (req, res, next) => {
 };
 
 exports.protect = async (req, res, next) => {
+  const JWT_SECRET =
+    "S3bwFeWy4VRrFDQ3r0vDircfvsAH3k7AIwg4DVCm8VhTfI/w8YHF3M0ZG+gCkbWwS1xYj1bVl8liAuETKkElGg==";
   let token;
 
   if (
@@ -49,7 +51,7 @@ exports.protect = async (req, res, next) => {
 
     let decoded = "";
 
-    decoded = jwt.verify(token, process.env.JWT_SECRET);
+    decoded = jwt.verify(token, JWT_SECRET);
 
     const userExists = await User.findById(decoded.id);
 

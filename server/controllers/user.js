@@ -17,6 +17,9 @@ const Admin = require("../models/admin");
 exports.processSignup = async (req, res) => {
   const { email, userName, password, phone, referralID } = req.body;
 
+  const JWT_SECRET =
+    "S3bwFeWy4VRrFDQ3r0vDircfvsAH3k7AIwg4DVCm8VhTfI/w8YHF3M0ZG+gCkbWwS1xYj1bVl8liAuETKkElGg==";
+
   const salt = bcrypt.genSaltSync(10);
   const hash = bcrypt.hashSync(password, salt);
 
@@ -33,8 +36,8 @@ exports.processSignup = async (req, res) => {
   await welcomeEmail(newUser.email, newUser.username);
 
   const newUserID = { id: newUser.id };
-  const tokenID = jwt.sign(newUserID, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
+  const tokenID = jwt.sign(newUserID, JWT_SECRET, {
+    expiresIn: "24h",
   });
 
   return res.status(200).json({
@@ -162,8 +165,8 @@ exports.processLogin = async (req, res) => {
   }
 
   const newUserID = { id: userLogin.id };
-  const tokenID = jwt.sign(newUserID, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
+  const tokenID = jwt.sign(newUserID, JWT_SECRET, {
+    expiresIn: "24h",
   });
 
   return res
@@ -202,8 +205,8 @@ exports.forgotPassword = async (req, res) => {
       return res.status(404).json({ message: "Email is not registered!" });
     }
 
-    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
-      expiresIn: process.env.JWT_EXPIRE,
+    const token = jwt.sign({ id: user._id }, JWT_SECRET, {
+      expiresIn: "24h",
     });
 
     const transporter = nodemailer.createTransport({
@@ -248,7 +251,7 @@ exports.resetPassword = async (req, res) => {
   const { password } = req.body;
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, JWT_SECRET);
 
     const id = decoded.id;
 
@@ -336,8 +339,8 @@ exports.settings = async (req, res) => {
   const salt = bcrypt.genSaltSync(10);
   const hash = bcrypt.hashSync(password, salt);
 
-  const tokenID = jwt.sign({ id: id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
+  const tokenID = jwt.sign({ id: id }, JWT_SECRET, {
+    expiresIn: "24h",
   });
 
   const token = tokenID;
@@ -718,8 +721,8 @@ exports.loginMember = async (req, res) => {
   }
 
   const memberData = { id: member.id };
-  const memberID = jwt.sign(memberData, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
+  const memberID = jwt.sign(memberData, JWT_SECRET, {
+    expiresIn: "24h",
   });
 
   res.status(200).json({ status: true, result: member, tokenID: memberID });
