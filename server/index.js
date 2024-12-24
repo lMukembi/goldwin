@@ -6,7 +6,7 @@ const connectionDB = require("./connection.js");
 require("dotenv").config();
 const app = express();
 const port = 8000;
-const MONGO_URI = "mongodb://127.0.0.1:27017/goldwin";
+const MONGO_URI = "mongodb://127.0.0.1:27017";
 
 app.use(express.json());
 app.use(
