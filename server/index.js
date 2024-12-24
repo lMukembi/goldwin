@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: "https://goldwinadverts.com",
-    methods: "GET, PUT, PATCH, POST, DELETE",
+    methods: ["GET", "PUT", "PATCH", "POST", "DELETE"],
   })
 );
 
